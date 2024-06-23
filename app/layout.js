@@ -3,6 +3,7 @@ import "./globals.css";
 import StackedLightHeaderAndFooter from "./components/Navbar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className}flex flex-col h-screen  dark:bg-gray-900 text-white max-w-[1280px] mx-auto `}
       >
+        <SpeedInsights />
         <Navbar />
         {children}
         <Footer />
